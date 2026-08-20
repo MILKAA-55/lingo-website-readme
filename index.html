@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoLove Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> LingoLove Wiki</h1>
+    <p> Wiki pour mon streameur préfèré LingoLove.</p>
+
+    <div id="content">Chargement de l'article...</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  fetch('wiki.md')
+    .then(response => response.text())
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    });
+</script>
+
+<footer>
+<a href="https://www.twitch.tv/lingolovee" target="_blank" rel="noopener noreferrer">
+  <img width="48" height="48" src="https://img.icons8.com/fluency/48/twitch.png" alt="Twitch"/></a>
+
+  <a href="https://discord.com/invite/VxB4Kpnq42" target="_blank" rel="noopener noreferrer">
+  <img width="48" height="48" src="https://img.icons8.com/fluency/48/discord-logo.png" alt="Discord"/></a>
+
+    <a href="https://www.youtube.com/channel/UC9Rab2YC0XZut3kk2r7xuRw" target="_blank" rel="noopener noreferrer">
+  <img width="48" height="48" src="https://img.icons8.com/office/40/youtube-play.png" alt="Youtube"/></a>
+
+
+
+
+
+
+</footer>
+
+</body>
+</html>
